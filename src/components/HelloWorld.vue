@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="hello px-10 py-10">
-      <div class="flex items-center justify-between ">
-        <div class="text-2xl font-bold text-blue-400">logo</div>
+      <div class="flex items-center justify-between">
+        <div class="text-2xl font-bold text-blue-400">MessageChat</div>
         <div class="flex space-x-6 items-center">
           <button
             v-for="tab in tabs"
@@ -21,18 +21,20 @@
 </template>
 
 <script>
-import Home from "./tabs/Home.vue";
-import About from "./tabs/About.vue";
+import Chats from "./tabs/Chats.vue";
+import Status from "./tabs/Status.vue";
+import Calls from "./tabs/Calls.vue";
 export default {
   name: "HelloWorld",
   components: {
-    Home,
-    About
+    Chats,
+    Status,
+    Calls,
   },
   data() {
     return {
-      selected: "Home",
-      tabs: ["Home", "About"],
+      selected: "Chats",
+      tabs: ["Chats", "Status", "calls"],
     };
   },
 };
