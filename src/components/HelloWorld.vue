@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="hello px-10 py-10">
-      <div class="flex items-center justify-between">
-        <div class="text-2xl font-bold text-blue-400">MessageChat</div>
-        <div class="flex space-x-6 items-center">
+    <div class="hello px-6 md:px-10 py-10">
+      <div class="flex items-center md:justify-between">
+        <div class="text-2xl font-bold text-blue-400  hidden md:block">MessageChat</div>
+        <div class="flex md:space-x-6  space-x-10 items-center">
           <button
             v-for="tab in tabs"
             :key="tab"
             @click="selected = tab"
-            class="text-lg font-bold border-gray-300 rounded-md h-12 w-48"
+            class="text-lg font-bold border-gray-300 rounded-md h-8 md:h-12 md:w-48 w-16"
             :class="['tab-btn', { active: selected === tab }]"
           >
             {{ tab }}
